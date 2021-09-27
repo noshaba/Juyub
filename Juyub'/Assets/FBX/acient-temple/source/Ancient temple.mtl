@@ -1,0 +1,46 @@
+# Blender MTL File: 'Ancient temple.blend'
+# Material Count: 4
+
+newmtl Pillar
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\Ox-Hackathon\\Juyub\\Juyub'\\Assets\\FBX\\acient-temple\\textures\\Pillar.png
+
+newmtl Roof
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\Ox-Hackathon\\Juyub\\Juyub'\\Assets\\FBX\\acient-temple\\textures\\Roof.png
+
+newmtl Stairs
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\Ox-Hackathon\\Juyub\\Juyub'\\Assets\\FBX\\acient-temple\\textures\\Stairs.png
+
+newmtl Temple
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\Ox-Hackathon\\Juyub\\Juyub'\\Assets\\FBX\\acient-temple\\textures\\Temple.png
