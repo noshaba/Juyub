@@ -50,7 +50,7 @@ Material:
     - _Height: 0.212
     - _QueueOffset: 0
     - _SampleGI: 0
-    - _Scale: 0.045
+    - _Scale: 0.235
     - _Speed: 0.5
     - _SrcBlend: 1
     - _Surface: 0
@@ -60,7 +60,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.37214306, g: 0.9528302, b: 0.8280865, a: 0.5}
+    - _Color: {r: 0.67240936, g: 0.9339623, b: 0.61148095, a: 0.5}
     - _FoamC: {r: 0.751157, g: 0.9433962, b: 0.9208926, a: 0.5}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Tint: {r: 1, g: 1, b: 1, a: 0.5}
