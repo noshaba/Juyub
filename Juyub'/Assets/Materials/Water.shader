@@ -2,9 +2,10 @@ Shader "Unlit/Simple Water"
 {
 	Properties
 	{
-		_Color("Tint", Color) = (1, 1, 1, .5)
-		_FoamC("Foam", Color) = (1, 1, 1, .5)
+		_Color("Tint", Color) = (1, 1, 1, 1)
+		_FoamC("Foam", Color) = (1, 1, 1, 1)
 		_MainTex("Main Texture", 2D) = "white" {}
+		_MaskInt("RenderTexture Mask", 2D) = "white" {}
 		_TextureDistort("Texture Wobble", range(0,1)) = 0.1
 		_NoiseTex("Extra Wave Noise", 2D) = "white" {}
 		_Speed("Wave Speed", Range(0,1)) = 0.5
@@ -50,11 +51,15 @@ Shader "Unlit/Simple Water"
 			float _TextureDistort;
 			float4 _Color;
 			Texture2D _CameraDepthTexture; SamplerState sampler_CameraDepthTexture;//Depth Texture
-			sampler2D _MainTex, _NoiseTex;//
+			sampler2D _MainTex, _NoiseTex, _MaskInt;//
 			float4 _MainTex_ST;
 			float _Speed, _Amount, _Height, _Foam, _Scale;// 
 			float4 _FoamC;
 			CBUFFER_END
+
+			uniform float3 _Position;
+			uniform sampler2D _GlobalEffectRT;
+			uniform float _OrthographicCamSize;
 
 			v2f vert(appdata v)
 			{
@@ -76,17 +81,33 @@ Shader "Unlit/Simple Water"
 
 			half4 frag(v2f i) : SV_Target
 			{
+				// rendertexture UV
+				float2 uv = i.worldPos.xz - _Position.xz;
+				uv = uv / (_OrthographicCamSize * 2);
+				uv += 0.5;
+				// Ripples
+				float ripples = tex2D(_GlobalEffectRT, uv).b;
+
+				// mask to prevent bleeding
+				float4 mask = tex2D(_MaskInt, uv);
+				ripples *= mask.a;
+
 				// sample the texture
 				half4 distortx = tex2D(_NoiseTex, (i.worldPos.xz * _Scale) + (_Time.x * 2)).r;// distortion alpha
+				distortx += (ripples * 2);
 
 				half4 col = tex2D(_MainTex, (i.worldPos.xz * _Scale) - (distortx * _TextureDistort));// texture times tint;			
 				half depth = LinearEyeDepth(_CameraDepthTexture.Sample(sampler_CameraDepthTexture, i.scrPos.xy / i.scrPos.w).r, _ZBufferParams); // depth
 				half4 foamLine = 1 - saturate(_Foam* (depth - i.scrPos.w));// foam line by comparing depth and screenposition
-				col = (col.rgb[0] + col.rgb[1] + col.rgb[2] == 3)? col : col * _Color;
+				//col = (col.rgb[0] + col.rgb[1] + col.rgb[2] == 3)? col : col * _Color;
+				col *= _Color;
 				col += (step(0.4 * distortx,foamLine) * _FoamC); // add the foam line and tint to the texture
 				col = saturate(col) * col.a;
 
-				return col;
+				ripples = step(0.99, ripples * 3);
+				float4 ripplesColored = ripples * _FoamC;
+
+				return saturate(col + ripplesColored);
 			}
 			ENDHLSL
 		}

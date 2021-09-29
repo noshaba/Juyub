@@ -46,22 +46,22 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.333
     - _DstBlend: 0
-    - _Foam: 1.88
-    - _Height: 0.212
+    - _Foam: 5.14
+    - _Height: 0.131
     - _QueueOffset: 0
     - _SampleGI: 0
-    - _Scale: 0.235
+    - _Scale: 0.151
     - _Speed: 0.5
     - _SrcBlend: 1
     - _Surface: 0
-    - _TextureDistort: 0.1
+    - _TextureDistort: 0.057
     - _WaveSpeed: 0.5
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.67240936, g: 0.9339623, b: 0.61148095, a: 0.5}
-    - _FoamC: {r: 0.751157, g: 0.9433962, b: 0.9208926, a: 0.5}
+    - _Color: {r: 0.7490196, g: 1, b: 1, a: 0.7490196}
+    - _FoamC: {r: 0.7490196, g: 1, b: 1, a: 0.7490196}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Tint: {r: 1, g: 1, b: 1, a: 0.5}
   m_BuildTextureStacks: []
