@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dissolve
-  m_Shader: {fileID: -6465566751694194690, guid: 15a7442fd73766e4eb328cbe2a1fce72, type: 3}
+  m_Name: SpriteDissolve
+  m_Shader: {fileID: -6465566751694194690, guid: f0ff0e69e4180c442a347d9e411a6d87, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,8 +19,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_18fa7ebdf728444cb11470740018163f:
-        m_Texture: {fileID: 2800000, guid: 87ce03bd447ccce48bbff87ac0d8355f, type: 3}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0d2e602917c76f6488c98c8bf7c59936, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -36,9 +36,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1e61cedb4b8540de9697d33f9b9599c1: 0
-    - Vector1_bd413507dae64a2eb57a56233a957ff6: 30
-    - Vector1_ff515260926247c9b16a9cbc05b58e08: 0.1
+    - Vector1_047cad3f8d454e7fa1b2598ea8087b6c: 0.01
+    - Vector1_a0df06f2874349598f6a0ab197f8ef8e: 30
+    - Vector1_f23a6e91fe54488da9b7aba5ce069c0b: 0
     m_Colors:
-    - Color_6f6affeb56ef45baa0a6d6a8d48aa6d8: {r: 0.40784314, g: 1.1450981, b: 3.8117647, a: 0}
+    - Color_d49fd263617a4c0d9824b7173e257985: {r: 10.985982, g: 11.984314, b: 0, a: 0}
   m_BuildTextureStacks: []
