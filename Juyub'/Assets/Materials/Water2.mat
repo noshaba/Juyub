@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
-  m_Shader: {fileID: 4800000, guid: 04ed7ff94fcbb6541ad38dc0ec683b52, type: 3}
+  m_Name: Water2
+  m_Shader: {fileID: -6465566751694194690, guid: 6fce20b2f09cbc841b258fc07edbe7b6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_37AAFE25:
+        m_Texture: {fileID: 2800000, guid: 50e561755bef8e84a9f0d53c6c60865c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B66AF0E1:
+        m_Texture: {fileID: 2800000, guid: f87c401db1857ab48bd66bf9611a4bc5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,11 +43,36 @@ Material:
         m_Texture: {fileID: 2800000, guid: 80eced35422d3c84690a80007e842d03, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MaskInt:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NoiseTex:
         m_Texture: {fileID: 2800000, guid: 33d2a3b1aed6a144e8d2ef2f1e622456, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_2E11270D: 0.03
+    - Vector1_39D35881: 1
+    - Vector1_3B48FD24: -0.27
+    - Vector1_5AE4170F: 0.15
+    - Vector1_80CAEB23: 0.3
+    - Vector1_8E5091B8: -0.33
+    - Vector1_981A3A67: 0.3
+    - Vector1_C1C7D298: 0.767
+    - Vector1_ECB3F2B8: 0.4
     - _AlphaClip: 0
     - _Amount: 0.6
     - _Blend: 0
@@ -59,6 +92,9 @@ Material:
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_27D4D743: {r: 0.27358484, g: 0.8226658, b: 1, a: 0}
+    - Color_51A4B6EC: {r: 0, g: 0.7135715, b: 1, a: 0}
+    - Color_C347D0B: {r: 0.5419473, g: 0.6784314, b: 0.45490196, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.7490196, g: 1, b: 1, a: 0.7490196}
     - _FoamC: {r: 0.7490196, g: 1, b: 1, a: 0.7490196}

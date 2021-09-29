@@ -5,7 +5,6 @@ Shader "Unlit/Simple Water"
 		_Color("Tint", Color) = (1, 1, 1, 1)
 		_FoamC("Foam", Color) = (1, 1, 1, 1)
 		_MainTex("Main Texture", 2D) = "white" {}
-		_MaskInt("RenderTexture Mask", 2D) = "white" {}
 		_TextureDistort("Texture Wobble", range(0,1)) = 0.1
 		_NoiseTex("Extra Wave Noise", 2D) = "white" {}
 		_Speed("Wave Speed", Range(0,1)) = 0.5
@@ -51,7 +50,7 @@ Shader "Unlit/Simple Water"
 			float _TextureDistort;
 			float4 _Color;
 			Texture2D _CameraDepthTexture; SamplerState sampler_CameraDepthTexture;//Depth Texture
-			sampler2D _MainTex, _NoiseTex, _MaskInt;//
+			sampler2D _MainTex, _NoiseTex;//
 			float4 _MainTex_ST;
 			float _Speed, _Amount, _Height, _Foam, _Scale;// 
 			float4 _FoamC;
@@ -87,10 +86,6 @@ Shader "Unlit/Simple Water"
 				uv += 0.5;
 				// Ripples
 				float ripples = tex2D(_GlobalEffectRT, uv).b;
-
-				// mask to prevent bleeding
-				float4 mask = tex2D(_MaskInt, uv);
-				ripples *= mask.a;
 
 				// sample the texture
 				half4 distortx = tex2D(_NoiseTex, (i.worldPos.xz * _Scale) + (_Time.x * 2)).r;// distortion alpha
