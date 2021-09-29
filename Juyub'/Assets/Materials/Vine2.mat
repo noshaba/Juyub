@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Growth
+  m_Name: Vine2
   m_Shader: {fileID: -6465566751694194690, guid: a859710fce30fb24aa9780e4f1e944d7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_7ba70ef4721c438594124f27c2daa87e:
-        m_Texture: {fileID: 2800000, guid: 1a4c6273be359854b901578738ba3962, type: 3}
+        m_Texture: {fileID: 2800000, guid: 388cc7fe760b30a409e1b1ede4413558, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
